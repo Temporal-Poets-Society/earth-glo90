@@ -1,0 +1,20 @@
+Copernicus GLO-90 land heights, converted for the Vintage Story mod Earth
+
+Produced using Copernicus WorldDEM(TM)-90 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided
+under COPERNICUS by the European Union and ESA; all rights reserved.
+
+The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any
+use of the Copernicus WorldDEM(TM)-90.
+
+This is adapted data. Each .egl file holds one 1-degree square of the Copernicus DEM GLO-90 (the public
+copernicus-dem-90m bucket), with heights rounded to whole metres (the source's no-data value, where present, stored as
+0) and losslessly compressed in Earth's DemTiles format (version 1). Nothing else is changed: the grid, its columns per
+latitude band and its coverage are the source's.
+
+Neither this data, nor Earth, nor Temporal Poets Society is endorsed by the Copernicus programme, the European Union,
+ESA, DLR or Airbus.
+
+Licence: the Copernicus WorldDEM-90 licence, eula_F.pdf (included unchanged, as it comes with every tile of the
+source). It allows reproduction, distribution, adaptation and combination with other data, free of charge, worldwide
+and without time limit, provided these notices are kept. Anyone who redistributes this data is bound by the same
+licence and must pass these notices on.
