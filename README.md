@@ -60,9 +60,32 @@ Copernicus DEM GLO-90 (COP-DEM-GLO-90-F), from the public `copernicus-dem-90m` b
 metres; the source's no-data value, where present, is stored as 0. Nothing else is changed: the grid, its columns per
 latitude band and its coverage are the source's. Squares without land (open sea) have no file, as in the source.
 
+## Water files
+
+The same release holds the water files Earth's GLO-90 worlds read beside the heights, baked on GLO-90's water body mask
+and heights. Each version is a new file; older ones stay for the worlds made with them.
+
+| File | Bytes | What it is | Worlds |
+|---|---|---|---|
+| `lakes-glo90-1.bin` to `-4.bin` | 56.8-58.1 MB each | lake outlines and levels | made with earlier Earth versions and test builds |
+| `lakes-glo90-5.bin` | 57,108,482 | lake outlines and levels on GLO-90's own grid (Earth decision 0092) | new worlds from Earth 2.2.0 |
+| `rivers-outline-glo90-1.bin` to `-4.bin` | 30.3-35.8 MB each | the river water of the mask, along the courses | made with earlier Earth versions and test builds |
+| `rivers-outline-glo90-5.bin` | 35,947,613 | river outlines on GLO-90's own grid | new worlds from Earth 2.2.0 |
+| `rivers-flow-glo90-1.bin` | 93,803,882 | which river water flows, which way and how fast | made with earlier Earth versions and test builds |
+| `rivers-flow-glo90-2.bin` | 93,894,092 | the same on GLO-90's own grid | new worlds from Earth 2.2.0 |
+| `dams-glo90-1.bin` to `-3.bin` | 4.8-6.2 MB each | the heights under modern reservoirs, dams taken down (no dams in 1318) | made with earlier Earth versions and test builds |
+| `dams-glo90-4.bin` | 6,390,099 | the same on GLO-90's own grid | new worlds from Earth 2.2.0 |
+| `streams-glo90-1.bin` | 64,553,844 | the streams from 1 to 20 m³/s on GLO-90's valley floors (Earth decision 0061) | new worlds at 1:25 and finer from Earth 2.2.0 |
+
+Earth checks each against the size and SHA-256 it was built with. They are adapted from Copernicus GLO-90 and from
+HydroRIVERS and HydroLAKES (HydroSHEDS licence), Global Dam Watch (CC BY 4.0) and, for `streams-glo90-1.bin`, GIRES
+(CC BY-SA 4.0): [ATTRIBUTION.txt](ATTRIBUTION.txt) has the notices. **`streams-glo90-1.bin` is distributed under CC
+BY-SA 4.0**, as GIRES requires.
+
 ## Licence and notices
 
-The data is under the Copernicus WorldDEM™-90 licence: see [LICENSE.md](LICENSE.md) and [eula_F.pdf](eula_F.pdf).
+The heights are under the Copernicus WorldDEM™-90 licence: see [LICENSE.md](LICENSE.md) and [eula_F.pdf](eula_F.pdf). The
+water files are under the licences of their sources as well ([ATTRIBUTION.txt](ATTRIBUTION.txt)).
 
 Produced using Copernicus WorldDEM™-90 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under
 COPERNICUS by the European Union and ESA; all rights reserved. The organisations in charge of the Copernicus programme by

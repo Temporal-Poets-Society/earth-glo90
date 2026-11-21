@@ -18,3 +18,32 @@ Licence: the Copernicus WorldDEM-90 licence, eula_F.pdf (included unchanged, as 
 source). It allows reproduction, distribution, adaptation and combination with other data, free of charge, worldwide
 and without time limit, provided these notices are kept. Anyone who redistributes this data is bound by the same
 licence and must pass these notices on.
+
+--------------------------------------------------------------------------------
+Water files (lakes-glo90-*.bin, rivers-outline-glo90-*.bin, rivers-flow-glo90-*.bin, dams-glo90-*.bin, streams-glo90-1.bin)
+--------------------------------------------------------------------------------
+Adapted from Copernicus GLO-90 (its water body mask and heights; the notice above applies) and:
+
+- HydroRIVERS v1.0 (river courses and discharges; for streams-glo90-1.bin, the reaches from 1 to 20 m3/s). Lehner, B.,
+  Grill G. (2013): Global river hydrography and network routing: baseline data and new approaches to study the world's
+  large river systems. Hydrological Processes, 27(15): 2171-2186. Data is available at www.hydrosheds.org. Used under
+  the HydroSHEDS license (free for scientific, educational and commercial use, with attribution).
+- HydroLAKES v1.0 (lake levels and the reservoirs left out). Messager, M.L., Lehner, B., Grill, G., Nedeva, I.,
+  Schmitt, O. (2016): Estimating the volume and age of water stored in global lakes using a geo-statistical approach.
+  Nature Communications, 7: 13603. Data is available at www.hydrosheds.org. Used under the HydroSHEDS license.
+- Global Dam Watch v1.0 (the reservoirs HydroLAKES lacks, for dams-glo90-3.bin and -4.bin, lakes-glo90-2.bin to -5.bin
+  and rivers-outline-glo90-4.bin and -5.bin). Lehner, B., Beames, P., Mulligan, M., Zarfl, C., De Felice, L., van
+  Soesbergen, A., Thieme, M., Garcia de Leaniz, C., Anand, M., Belletti, B., et al. (2024): The Global Dam Watch database
+  of river barrier and reservoir information for large-scale applications. Scientific Data 11, 1069.
+  https://doi.org/10.1038/s41597-024-03752-9. Licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+- GIRES v1.0, Global prevalence of non-perennial rivers and streams (for streams-glo90-1.bin: the streams without flow
+  30 days a year or more where the coldest month is above -10 C are left out). Messager, M.L., Lehner, B., Cockburn, C.,
+  Lamouroux, N., Pella, H., Snelder, T., Tockner, K., Trautmann, T., Watt, C., Datry, T. (2021): Global prevalence of
+  non-perennial rivers and streams. Nature 594, 391-397. https://doi.org/10.1038/s41586-021-03565-5. Data: Messager,
+  M.L., Lehner, B. (2021), figshare, https://doi.org/10.6084/m9.figshare.14633022. Licensed under CC BY-SA 4.0
+  (https://creativecommons.org/licenses/by-sa/4.0/). streams-glo90-1.bin is distributed under the same licence,
+  CC BY-SA 4.0.
+
+How they were made: Earth's tools (bake_lake_outlines.py, bake_river_outlines.py, bake_river_flow.py,
+bake_dam_removal.py, streams/bake_stream_tiles.py); the files ending -5, rivers-flow-glo90-2.bin and dams-glo90-4.bin
+(Earth 2.2.0) put the water on GLO-90's own grid, whose heights are points, not cell centres (Earth decision 0092).
